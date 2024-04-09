@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/images/pizza.png" afterDir="false" />
+    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Final project">
+      <change afterPath="$PROJECT_DIR$/images/down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ghost.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/pacman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packmen/game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packmen/packmen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/fridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/menu_drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/menu_drinks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/menu_pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/menu_pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/menu_principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/menu_principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/pizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/game_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/game_service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +96,7 @@
       <workItem from="1712404972021" duration="11956000" />
       <workItem from="1712476956616" duration="23072000" />
       <workItem from="1712586199533" duration="134000" />
-      <workItem from="1712660130465" duration="6724000" />
+      <workItem from="1712660130465" duration="13379000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -101,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712664735776</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final project">
+      <option name="closed" value="true" />
+      <created>1712672653935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712672653935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="Final project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final project" />
   </component>
 </project>

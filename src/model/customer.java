@@ -13,21 +13,24 @@ public class customer {
     private List<pizza> order_pizza;
     private String drink;
     private int cost_drink;
-    public String getDrink() {
-        return drink;
-    }
 
+    private int score_game;
     public customer(String name, int money) {
         this.name = name;
         this.money = money;
         this.order_pizza= new ArrayList<pizza>(10);
     }
-
+    public String getDrink() {
+        return drink;
+    }
     public List<pizza> getOrder() {
         return order_pizza;
     }
 
-
+    public void set_score(int score){
+        this.score_game=score;
+        this.money+=score_game;
+    }
     public String getName() {
         return name;
     }

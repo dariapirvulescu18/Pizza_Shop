@@ -34,9 +34,7 @@ public class pizza {
         this.size = size;
     }
 
-    public void setExtra_toppings(ArrayList<ingredient> extra_toppings) {
-        Collections.copy(this.ingredients, extra_toppings);
-    }
+
 
     public int getCost() {
         return cost;

@@ -1,10 +1,13 @@
 package service;
 
 import model.*;
+import packmen.packmen;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class game_service {
     public void start_game() throws InterruptedException {
@@ -128,5 +131,24 @@ public class game_service {
         }
 
         Gelu.display_ingredients();
+
+        System.out.println("Would you like to play a game to earn some money?");
+        String response9 = scanner.next();
+        if(response9.equals("Yes")){
+            play_packmen(Daria);
+        }
+    }
+    public void play_packmen(customer Daria) throws InterruptedException {
+        packmen pac = new packmen(Daria);
+        pac.setVisible(true);
+        pac.setTitle("Pacman");
+        pac.setSize(380, 420);
+        pac.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        pac.setLocationRelativeTo(null);
+        while (!pac.isGameOver()){
+            Thread.sleep(100);
+        }
+
+        System.out.println("You earned "+ pac.getScore() + " money");
     }
 }

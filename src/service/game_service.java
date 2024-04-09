@@ -150,5 +150,6 @@ public class game_service {
         }
 
         System.out.println("You earned "+ pac.getScore() + " money");
+        System.out.println(Daria);
     }
 }

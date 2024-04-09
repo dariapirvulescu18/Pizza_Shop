@@ -16,8 +16,7 @@ public class packmen extends JFrame{
     }
 
     public int getScore() {
-        gamer.set_score(score);
-        gamer.set_score(score);
+        gamer.set_score(this.gamee.getScore());
         return this.gamee.getScore();
     }
     public boolean isGameOver(){

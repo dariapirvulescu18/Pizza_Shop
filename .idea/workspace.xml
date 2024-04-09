@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Final project">
-      <change afterPath="$PROJECT_DIR$/images/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ghost.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pacman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/packmen/game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/packmen/packmen.java" afterDir="false" />
+    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Final final project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packmen/packmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packmen/packmen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/game_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/game_service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -50,23 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desktop\daria facutate\anul 2 sem 2\PAO\proiect_pizzeria\images" />
@@ -97,6 +89,8 @@
       <workItem from="1712476956616" duration="23072000" />
       <workItem from="1712586199533" duration="134000" />
       <workItem from="1712660130465" duration="13379000" />
+      <workItem from="1712679221432" duration="110000" />
+      <workItem from="1712682753280" duration="411000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -114,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712672653935</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Final final project">
+      <option name="closed" value="true" />
+      <created>1712679259682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679259683</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="Final project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final project" />
+    <MESSAGE value="Final final project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final final project" />
   </component>
 </project>

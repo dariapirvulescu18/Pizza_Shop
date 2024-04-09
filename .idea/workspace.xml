@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="" />
+    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/DRINKS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/menu_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proiect_pizzeria.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/fridge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ingredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ingredient_factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/menu_drinks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/menu_pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/menu_principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/receipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/game_service.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2edPjNwobwbju0u4KWRGpW5YKvA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -21,15 +58,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/src/Main.java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\daria facutate\anul 2 sem 2\PAO\proiect_pizzeria\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Desktop\daria facutate\anul 2 sem 2\PAO\proiect_pizzeria\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -45,22 +96,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712231619153</updated>
-      <workItem from="1712231620233" duration="2000" />
+      <workItem from="1712231620233" duration="5835000" />
+      <workItem from="1712243391233" duration="3953000" />
+      <workItem from="1712336880237" duration="5410000" />
+      <workItem from="1712404972021" duration="11956000" />
+      <workItem from="1712476956616" duration="23072000" />
+      <workItem from="1712586199533" duration="134000" />
+      <workItem from="1712660130465" duration="4014000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

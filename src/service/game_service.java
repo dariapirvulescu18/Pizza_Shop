@@ -127,6 +127,6 @@ public class game_service {
             System.out.println(receipt_Daria);
         }
 
-
+        Gelu.display_ingredients();
     }
 }

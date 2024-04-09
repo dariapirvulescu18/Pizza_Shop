@@ -83,7 +83,7 @@ public class menu_principal extends menu{
         pizzaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new menu_pizza().menuframe.setVisible(true);
+                new menu_pizza().init_menu_frame();
             }
         });
         buttonPanel.add(pizzaButton);

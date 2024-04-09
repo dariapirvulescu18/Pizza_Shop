@@ -1,5 +1,7 @@
 package model;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class menu_pizza extends menu {
@@ -69,6 +71,50 @@ public class menu_pizza extends menu {
     }
     @Override
     public void init_menu_frame() {
+        menuframe.setTitle("Drinks Menu");
+        menuframe.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        menuframe.setResizable(false);
+        menuframe.setSize(400, 600);
+        menuframe.setLocationRelativeTo(null);
 
+        ImageIcon originalIcon = new ImageIcon("images/pizza.png");
+        Image originalImage = originalIcon.getImage();
+
+        // Scale the image to 400x600
+        Image scaledImage = originalImage.getScaledInstance(400, 600, Image.SCALE_SMOOTH);
+
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        JPanel drinksPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(scaledImage, 0, 0, null);
+            }
+        };
+        GridBagLayout gridBagLayout = new GridBagLayout();
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.fill = GridBagConstraints.NONE;
+        drinksPanel.setLayout(gridBagLayout); // Set layout to vertical BoxLayout
+        gridBagConstraints.insets = new Insets(25, 15, 10, 15);
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+
+        drinksPanel.add(new JLabel("                             "),gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        drinksPanel.add(new JLabel("                                 "),gridBagConstraints);
+
+        int index=2;
+        for (var piz : pizzas) {
+            gridBagConstraints.gridy=index;
+            index++;
+            String drinkDetails = String.format("%s .......................................... $%d", piz.getType(), piz.getCost());
+            JLabel drinkLabel = new JLabel(drinkDetails);
+            drinksPanel.add(drinkLabel,gridBagConstraints);
+
+        }
+
+        menuframe.add(drinksPanel, BorderLayout.CENTER);
+
+        menuframe.setVisible(true);
     }
 }

@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class customer {
     private String name;
@@ -36,14 +37,17 @@ public class customer {
     public String response_drinks(){
         menu_drinks drinks1=new menu_drinks();
         HashMap<String,Integer[]> options = drinks1.getDrinks();
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(5) + 1;
         for(String drink:options.keySet()){
             Integer[] details=options.get(drink);
-            if(money>=details[0]){
+            if(money>=details[0] && details[1]==randomNumber){
                 money-=details[0];
                 this.drink=drink;
                 cost_drink=details[0];
                 return drink;
             }
+
         }
         System.out.println("You don't have enough money for a drink!");
         return "";

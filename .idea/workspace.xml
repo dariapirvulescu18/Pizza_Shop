@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/DRINKS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proiect_pizzeria.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/fridge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ingredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ingredient_factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/menu_drinks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/menu_pizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/menu_principal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/pizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/receipt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/game_service.java" afterDir="false" />
+    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Test">
+      <change afterPath="$PROJECT_DIR$/images/pizza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/fridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu_drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/menu_drinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu_pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/menu_pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu_principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/menu_principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/game_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/game_service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,11 +91,47 @@
       <workItem from="1712404972021" duration="11956000" />
       <workItem from="1712476956616" duration="23072000" />
       <workItem from="1712586199533" duration="134000" />
-      <workItem from="1712660130465" duration="4014000" />
+      <workItem from="1712660130465" duration="6724000" />
     </task>
+    <task id="LOCAL-00001" summary="Test">
+      <option name="closed" value="true" />
+      <created>1712664735775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712664735776</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
 </project>

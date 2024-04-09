@@ -39,5 +39,11 @@ public class fridge {
         }
         return true;
     }
+    public void display_ingredients(){
+        System.out.println("The cook ingredients in the fridge");
+        for(var ing: ingredients){
+            System.out.println(ing.getName()+ " ❎ "+ ing.getQuantity());
+        }
+    }
 
 }

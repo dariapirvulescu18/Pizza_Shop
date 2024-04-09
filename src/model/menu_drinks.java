@@ -46,9 +46,6 @@ public class menu_drinks extends menu {
             case "Beer":
                 str.append("🍺");
                 break;
-            default:
-                str.append("Unknown");
-                break;
         }
 
         java.util.Timer timer = new Timer();

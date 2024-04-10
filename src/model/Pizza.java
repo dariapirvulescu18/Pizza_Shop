@@ -2,26 +2,26 @@ package model;
 
 import java.util.*;
 
-public class pizza {
+public class Pizza {
     private String type;
     private String size;
-    private ArrayList<ingredient> ingredients;
+    private ArrayList<Ingredient> ingredients;
     private boolean cooked=false;
 
     private int cost;
 
-    public pizza (String type,  int cost,ArrayList<ingredient> ingredients)  {
+    public Pizza(String type, int cost, ArrayList<Ingredient> ingredients)  {
        this.type=type;
        this.cost=cost;
        this.size = "";
        this.ingredients = ingredients;
     }
 
-    public ArrayList<ingredient> getIngredients() {
+    public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public pizza(pizza p){
+    public Pizza(Pizza p){
         this.type=p.type;
         this.size= p.size;
         this.cost=p.cost;
@@ -104,7 +104,7 @@ public class pizza {
         }
     }
 
-    public void update_cost(int cost) {
+    public void updateCost(int cost) {
         this.cost = cost;
     }
 

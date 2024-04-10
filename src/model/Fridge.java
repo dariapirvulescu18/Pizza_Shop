@@ -1,21 +1,21 @@
 package model;
 
 import java.util.ArrayList;
-public class fridge {
-    private ArrayList<ingredient> ingredients;
+public class Fridge {
+    private ArrayList<Ingredient> ingredients;
 
-    public fridge(ArrayList<ingredient> ingredients) {
+    public Fridge(ArrayList<Ingredient> ingredients) {
 
         this.ingredients = ingredients;
     }
-    public void add_ingredient(ingredient ingredient) {
-        this.ingredients.add(ingredient);
-    }
-    public void remove_ingredient(ingredient ingredient){
-        this.ingredients.remove(ingredient);
-    }
+//    public void add_ingredient(Ingredient ingredient) {
+//        this.ingredients.add(ingredient);
+//    }
+//    public void remove_ingredient(Ingredient ingredient){
+//        this.ingredients.remove(ingredient);
+//    }
 
-    public boolean check_ingredient(ingredient ingredient){
+    public boolean checkIngredient(Ingredient ingredient){
         for(var ing :ingredients){
             if(ing.getName().equals(ingredient.getName())&& ing.getQuantity()>=ingredient.getQuantity())
                 return true;
@@ -24,13 +24,13 @@ public class fridge {
         return false;
     }
 
-    public boolean check_availability_pizza(pizza pizza){
-        ArrayList<ingredient> pizza_ingredients= pizza.getIngredients();
-        for(var ing :pizza_ingredients){
-            if(!check_ingredient(ing))
+    public boolean checkAavailabilityPizza(Pizza pizza){
+        ArrayList<Ingredient> pizzaIngredients= pizza.getIngredients();
+        for(var ing :pizzaIngredients){
+            if(!checkIngredient(ing))
                 return false;
         }
-        for(var ing :pizza_ingredients){
+        for(var ing :pizzaIngredients){
             for(var ing_f:this.ingredients){
                 if(ing.getName().equals(ing_f.getName())){
                     ing_f.setQuantity(ing_f.getQuantity()-ing.getQuantity());
@@ -39,7 +39,7 @@ public class fridge {
         }
         return true;
     }
-    public void display_ingredients(){
+    public void displayIngredients(){
         System.out.println("The cook ingredients in the fridge");
         for(var ing: ingredients){
             System.out.println(ing.getName()+ " ❎ "+ ing.getQuantity());

@@ -8,14 +8,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class menu_drinks extends menu {
+public class MenuDrinks extends Menu {
     private HashMap<String, Integer []> drinks;
 
     public HashMap<String, Integer[]> getDrinks() {
         return drinks;
     }
 
-    public menu_drinks(){
+    public MenuDrinks(){
         this.drinks = new HashMap<>();
         drinks.put("Wine", new Integer[]{70, 2});
         drinks.put("Cocktail", new Integer[]{50, 5});
@@ -65,7 +65,6 @@ public class menu_drinks extends menu {
         for (int i = 0; i < 20; i++) {
             StringBuilder line = new StringBuilder();
 
-            // Generate the line content based on the current position
             for (int j = 0; j < 20; j++) {
                 if (j < i) {
                     line.append(".");
@@ -90,12 +89,12 @@ public class menu_drinks extends menu {
     }
 
     @Override
-    public void init_menu_frame() {
-        menuframe.setTitle("Drinks Menu");
-        menuframe.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        menuframe.setResizable(false);
-        menuframe.setSize(400, 600);
-        menuframe.setLocationRelativeTo(null);
+    public void initMenuFrame() {
+        menuFrame.setTitle("Drinks Menu");
+        menuFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        menuFrame.setResizable(false);
+        menuFrame.setSize(400, 600);
+        menuFrame.setLocationRelativeTo(null);
 
         ImageIcon originalIcon = new ImageIcon("images/DRINKS.png");
         Image originalImage = originalIcon.getImage();
@@ -134,8 +133,8 @@ public class menu_drinks extends menu {
 
         }
 
-        menuframe.add(drinksPanel, BorderLayout.CENTER);
+        menuFrame.add(drinksPanel, BorderLayout.CENTER);
 
-        menuframe.setVisible(true);
+        menuFrame.setVisible(true);
     }
 }

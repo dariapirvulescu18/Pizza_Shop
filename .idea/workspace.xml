@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Final final project">
+    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Final final final project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/packmen/packmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packmen/packmen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/game_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/game_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ingredient_factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/IngredientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu_drinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MenuDrinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu_pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MenuPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menu_principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Receipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packmen/game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packmen/GamePacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packmen/packmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packmen/PacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/game_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/GameService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +102,8 @@
       <workItem from="1712586199533" duration="134000" />
       <workItem from="1712660130465" duration="13379000" />
       <workItem from="1712679221432" duration="110000" />
-      <workItem from="1712682753280" duration="411000" />
+      <workItem from="1712682753280" duration="519000" />
+      <workItem from="1712762377841" duration="3356000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -116,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712679259683</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final final final project">
+      <option name="closed" value="true" />
+      <created>1712683231477</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712683231477</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +170,8 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Final project" />
     <MESSAGE value="Final final project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final final project" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="Final final final project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final final final project" />
   </component>
 </project>

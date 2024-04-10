@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class game extends JPanel implements ActionListener {
+public class GamePacMan extends JPanel implements ActionListener {
 
     private Dimension d;
     private final Font smallFont = new Font("Arial", Font.BOLD, 14);
     private boolean inGame = false;
     private boolean dying = false;
-    private boolean game_over = false;
+    private boolean gameOver = false;
     private final int BLOCK_SIZE = 24;
     private final int N_BLOCKS = 15;
     private final int SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE;
@@ -23,7 +23,7 @@ public class game extends JPanel implements ActionListener {
     private int N_GHOSTS = 6;
     private int lives, score;
     private int[] dx, dy;
-    private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;
+    private int[] ghostX, ghostY, ghostDx, ghostDy, ghostSpeed;
 
     private Image heart, ghost;
     private Image up, down, left, right;
@@ -57,7 +57,7 @@ public class game extends JPanel implements ActionListener {
     private Timer timer;
 
 
-    public game() {
+    public GamePacMan() {
 
         loadImages();
         initVariables();
@@ -69,7 +69,7 @@ public class game extends JPanel implements ActionListener {
         return this.score;
     }
     public boolean getGameOver(){
-        return this.game_over;
+        return this.gameOver;
     }
 
 
@@ -86,10 +86,10 @@ public class game extends JPanel implements ActionListener {
 
         screenData = new short[N_BLOCKS * N_BLOCKS];
         d = new Dimension(400, 400);
-        ghost_x = new int[MAX_GHOSTS];
-        ghost_dx = new int[MAX_GHOSTS];
-        ghost_y = new int[MAX_GHOSTS];
-        ghost_dy = new int[MAX_GHOSTS];
+        ghostX = new int[MAX_GHOSTS];
+        ghostDx = new int[MAX_GHOSTS];
+        ghostY = new int[MAX_GHOSTS];
+        ghostDy = new int[MAX_GHOSTS];
         ghostSpeed = new int[MAX_GHOSTS];
         dx = new int[4];
         dy = new int[4];
@@ -175,7 +175,7 @@ public class game extends JPanel implements ActionListener {
 
         if (lives == 0) {
             inGame = false;
-            game_over=true;
+            gameOver =true;
         }
 
 
@@ -188,30 +188,30 @@ public class game extends JPanel implements ActionListener {
         int count;
 
         for (int i = 0; i < N_GHOSTS; i++) {
-            if (ghost_x[i] % BLOCK_SIZE == 0 && ghost_y[i] % BLOCK_SIZE == 0) {
-                pos = ghost_x[i] / BLOCK_SIZE + N_BLOCKS * (int) (ghost_y[i] / BLOCK_SIZE);
+            if (ghostX[i] % BLOCK_SIZE == 0 && ghostY[i] % BLOCK_SIZE == 0) {
+                pos = ghostX[i] / BLOCK_SIZE + N_BLOCKS * (int) (ghostY[i] / BLOCK_SIZE);
 
                 count = 0;
 
-                if ((screenData[pos] & 1) == 0 && ghost_dx[i] != 1) {
+                if ((screenData[pos] & 1) == 0 && ghostDx[i] != 1) {
                     dx[count] = -1;
                     dy[count] = 0;
                     count++;
                 }
 
-                if ((screenData[pos] & 2) == 0 && ghost_dy[i] != 1) {
+                if ((screenData[pos] & 2) == 0 && ghostDy[i] != 1) {
                     dx[count] = 0;
                     dy[count] = -1;
                     count++;
                 }
 
-                if ((screenData[pos] & 4) == 0 && ghost_dx[i] != -1) {
+                if ((screenData[pos] & 4) == 0 && ghostDx[i] != -1) {
                     dx[count] = 1;
                     dy[count] = 0;
                     count++;
                 }
 
-                if ((screenData[pos] & 8) == 0 && ghost_dy[i] != -1) {
+                if ((screenData[pos] & 8) == 0 && ghostDy[i] != -1) {
                     dx[count] = 0;
                     dy[count] = 1;
                     count++;
@@ -220,11 +220,11 @@ public class game extends JPanel implements ActionListener {
                 if (count == 0) {
 
                     if ((screenData[pos] & 15) == 15) {
-                        ghost_dx[i] = 0;
-                        ghost_dy[i] = 0;
+                        ghostDx[i] = 0;
+                        ghostDy[i] = 0;
                     } else {
-                        ghost_dx[i] = -ghost_dx[i];
-                        ghost_dy[i] = -ghost_dy[i];
+                        ghostDx[i] = -ghostDx[i];
+                        ghostDy[i] = -ghostDy[i];
                     }
 
                 } else {
@@ -235,18 +235,18 @@ public class game extends JPanel implements ActionListener {
                         count = 3;
                     }
 
-                    ghost_dx[i] = dx[count];
-                    ghost_dy[i] = dy[count];
+                    ghostDx[i] = dx[count];
+                    ghostDy[i] = dy[count];
                 }
 
             }
 
-            ghost_x[i] = ghost_x[i] + (ghost_dx[i] * ghostSpeed[i]);
-            ghost_y[i] = ghost_y[i] + (ghost_dy[i] * ghostSpeed[i]);
-            drawGhost(g2d, ghost_x[i] + 1, ghost_y[i] + 1);
+            ghostX[i] = ghostX[i] + (ghostDx[i] * ghostSpeed[i]);
+            ghostY[i] = ghostY[i] + (ghostDy[i] * ghostSpeed[i]);
+            drawGhost(g2d, ghostX[i] + 1, ghostY[i] + 1);
 
-            if (pacman_x > (ghost_x[i] - 12) && pacman_x < (ghost_x[i] + 12)
-                    && pacman_y > (ghost_y[i] - 12) && pacman_y < (ghost_y[i] + 12)
+            if (pacman_x > (ghostX[i] - 12) && pacman_x < (ghostX[i] + 12)
+                    && pacman_y > (ghostY[i] - 12) && pacman_y < (ghostY[i] + 12)
                     && inGame) {
 
                 dying = true;
@@ -377,10 +377,10 @@ public class game extends JPanel implements ActionListener {
 
         for (int i = 0; i < N_GHOSTS; i++) {
 
-            ghost_y[i] = 4 * BLOCK_SIZE; //start position
-            ghost_x[i] = 4 * BLOCK_SIZE;
-            ghost_dy[i] = 0;
-            ghost_dx[i] = dx;
+            ghostY[i] = 4 * BLOCK_SIZE; //start position
+            ghostX[i] = 4 * BLOCK_SIZE;
+            ghostDy[i] = 0;
+            ghostDx[i] = dx;
             dx = -dx;
             random = (int) (Math.random() * (currentSpeed + 1));
 
@@ -415,7 +415,7 @@ public class game extends JPanel implements ActionListener {
         if (inGame) {
             playGame(g2d);
         } else {
-            if(game_over) {
+            if(gameOver) {
                 showDeath(g2d);
             }
             else

@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class menu_principal extends menu{
-    public menu_principal(){
+public class MenuPrincipal extends Menu {
+    public MenuPrincipal(){
         super();
 
     }
@@ -19,19 +19,19 @@ public class menu_principal extends menu{
     }
 
     @Override
-    public void init_menu_frame(){
-        menu.visits++;
+    public void initMenuFrame(){
+        Menu.visits++;
 
-        menuframe.setTitle("Restaurant Menu");
-        menuframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        menuframe.setSize(600, 600);
-        menuframe.setLayout(new BorderLayout());
+        menuFrame.setTitle("Restaurant Menu");
+        menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menuFrame.setSize(600, 600);
+        menuFrame.setLayout(new BorderLayout());
 
         ImageIcon meniuIcon = new ImageIcon("images/menu_cover.png");
         JLabel meniuLabel = new JLabel(meniuIcon);
         meniuLabel.setHorizontalAlignment(SwingConstants.CENTER);
         meniuLabel.setVerticalAlignment(SwingConstants.CENTER);
-        menuframe.add(meniuLabel, BorderLayout.CENTER);
+        menuFrame.add(meniuLabel, BorderLayout.CENTER);
 
         JPanel buttonPanel = new JPanel(new GridLayout(1, 2, 10, 10));
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -57,7 +57,7 @@ public class menu_principal extends menu{
         bauturiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new menu_drinks().init_menu_frame();
+                new MenuDrinks().initMenuFrame();
             }
         });
         buttonPanel.add(bauturiButton);
@@ -83,14 +83,14 @@ public class menu_principal extends menu{
         pizzaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new menu_pizza().init_menu_frame();
+                new MenuPizza().initMenuFrame();
             }
         });
         buttonPanel.add(pizzaButton);
 
-        menuframe.add(buttonPanel, BorderLayout.SOUTH);
+        menuFrame.add(buttonPanel, BorderLayout.SOUTH);
 
-        menuframe.setLocationRelativeTo(null);
-        menuframe.setVisible(true);
+        menuFrame.setLocationRelativeTo(null);
+        menuFrame.setVisible(true);
     }
 }

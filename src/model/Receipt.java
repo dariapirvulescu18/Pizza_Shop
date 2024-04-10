@@ -4,46 +4,46 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class receipt {
-    private customer client;
+public class Receipt {
+    private Customer client;
     private LocalDate date;
 
-    private int final_cost;
+    private int finalCost;
     private int tip;
 
-    public receipt(customer client) {
+    public Receipt(Customer client) {
         this.client = client;
         this.date = LocalDate.now();
         this.tip=0;
     }
 
-    public int getFinal_cost() {
-        return final_cost;
+    public int getFinalCost() {
+        return finalCost;
     }
 
-    public void calculate_final_cost(){
-        for(pizza pi :this.client.getOrder()){
-            this.final_cost+=pi.getCost();
+    public void calculateFinalCost(){
+        for(Pizza pi :this.client.getOrder()){
+            this.finalCost +=pi.getCost();
         }
-        this.final_cost+=this.client.get_cost_drink();
+        this.finalCost +=this.client.getCostDrink();
     }
-    public void calulate_final_cost_tip(int tipp) throws Exception {
-        int tip_money = (int)(this.final_cost*(tipp*0.01));
-        int tip_cost = this.final_cost+ (int) (this.final_cost*(tipp*0.01));
-        if(tip_money>this.client.getMoney()){
+    public void calulateFinalCostTip(int tipp) throws Exception {
+        int tipMoney = (int)(this.finalCost *(tipp*0.01));
+        int tipCost = this.finalCost + (int) (this.finalCost *(tipp*0.01));
+        if(tipMoney>this.client.getMoney()){
             this.tip=0;
             throw new Exception("You don't have enough money to tip that much!");
         }
         this.tip=tipp;
-        this.final_cost=tip_cost;
+        this.finalCost =tipCost;
     }
     @Override
     public String toString() {
         ArrayList<String> receipt = new ArrayList<>();
         receipt.add("On the date "+ date + " you ordered: \n");
-        List<pizza> pizza = client.getOrder();
+        List<Pizza> pizza = client.getOrder();
         if (pizza != null) {
-            for(pizza pi:pizza){
+            for(Pizza pi:pizza){
                 receipt.add("Pizza "+ pi.getType()+ " worth " + pi.getCost() +"\n");
             }
         }
@@ -51,14 +51,14 @@ public class receipt {
             receipt.add("You didn't order any pizza!");
         String drink = client.getDrink();
         if(drink!=null)
-             receipt.add("Drink: "+ drink+ " worth "+ client.get_cost_drink()+ "\n");
+             receipt.add("Drink: "+ drink+ " worth "+ client.getCostDrink()+ "\n");
         else
             receipt.add("You didn't order any drinks!\n");
         if(tip>0){
             receipt.add("Tip: "+tip+ "\n");
         }
         else receipt.add("No tip \n");
-        receipt.add("Your final cost is: "+ this.final_cost+"\n");
+        receipt.add("Your final cost is: "+ this.finalCost +"\n");
         return String.join("",receipt);
     }
 }

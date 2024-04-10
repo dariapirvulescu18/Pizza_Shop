@@ -1,9 +1,9 @@
-import service.game_service;
+import service.GameService;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        game_service start_game = new game_service();
-        start_game.start_game();
+        GameService start_game = new GameService();
+        start_game.startGame();
 
     }
 

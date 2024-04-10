@@ -5,40 +5,40 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
-public class customer {
+public class Customer {
     private String name;
 
     private int money;
 
-    private List<pizza> order_pizza;
+    private List<Pizza> orderPizza;
     private String drink;
-    private int cost_drink;
+    private int costDrink;
 
-    private int score_game;
-    public customer(String name, int money) {
+    private int scoreGame;
+    public Customer(String name, int money) {
         this.name = name;
         this.money = money;
-        this.order_pizza= new ArrayList<pizza>(10);
+        this.orderPizza = new ArrayList<Pizza>(10);
     }
     public String getDrink() {
         return drink;
     }
-    public List<pizza> getOrder() {
-        return order_pizza;
+    public List<Pizza> getOrder() {
+        return orderPizza;
     }
 
-    public void set_score(int score){
-        this.score_game=score;
-        this.money+=score_game;
+    public void setScore(int score){
+        this.scoreGame =score;
+        this.money+= scoreGame;
     }
     public String getName() {
         return name;
     }
-    public int get_cost_drink(){
-        return cost_drink;
+    public int getCostDrink(){
+        return costDrink;
     }
-    public String response_drinks(){
-        menu_drinks drinks1=new menu_drinks();
+    public String responseDrinks(){
+        MenuDrinks drinks1=new MenuDrinks();
         HashMap<String,Integer[]> options = drinks1.getDrinks();
         Random rand = new Random();
         int randomNumber = rand.nextInt(5) + 1;
@@ -47,7 +47,7 @@ public class customer {
             if(money>=details[0] && details[1]==randomNumber){
                 money-=details[0];
                 this.drink=drink;
-                cost_drink=details[0];
+                costDrink =details[0];
                 return drink;
             }
 
@@ -60,28 +60,28 @@ public class customer {
         return money;
     }
 
-    public void response_pizza(pizza pizza_available,String size_response) throws Exception {
+    public void responsePizza(Pizza pizzaAvailable, String sizeResponse) throws Exception {
 
-        int size_cost = switch (size_response) {
+        int sizeCost = switch (sizeResponse) {
             case "small" -> 10;
             case "medium" -> 20;
             case "big" -> 30;
             default -> 0;
         };
-        int final_cost =pizza_available.getCost()+ (int) (pizza_available.getCost()*(size_cost*0.01));
-        if(this.money<final_cost){
-            throw new Exception("You don't have enough money to buy " +pizza_available.getSize() +" "+ pizza_available.getType() +" pizza!");
+        int finalCost =pizzaAvailable.getCost()+ (int) (pizzaAvailable.getCost()*(sizeCost*0.01));
+        if(this.money<finalCost){
+            throw new Exception("You don't have enough money to buy " +pizzaAvailable.getSize() +" "+ pizzaAvailable.getType() +" pizza!");
 
         }
         else {
-            pizza_available.update_cost(final_cost);
-            pizza_available.setSize(size_response);
-            this.money-=pizza_available.getCost();
+            pizzaAvailable.updateCost(finalCost);
+            pizzaAvailable.setSize(sizeResponse);
+            this.money-=pizzaAvailable.getCost();
         }
     }
-    public void add_pizza(pizza response_pizza){
+    public void add_pizza(Pizza responsePizza){
 
-        order_pizza.add(response_pizza);
+        orderPizza.add(responsePizza);
     }
     @Override
     public String toString() {

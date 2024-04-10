@@ -26,7 +26,7 @@ system and a list of at least 8 object types.
 - [X] at least one service class to expose system operations;
 - [X] a Main class from which calls to services are made.
 
-![](<img width="960" alt="Screenshot 2024-04-10 183135" src="https://github.com/dariapirvulescu18/Pizza_Shop/assets/115870351/6e15456e-2744-4d5f-ab17-3b91436d06bb">)
+!(<img width="960" alt="Screenshot 2024-04-10 183135" src="https://github.com/dariapirvulescu18/Pizza_Shop/assets/115870351/6e15456e-2744-4d5f-ab17-3b91436d06bb">)
 (<img width="960" alt="Screenshot 2024-04-10 183238" src="https://github.com/dariapirvulescu18/Pizza_Shop/assets/115870351/349d13d3-e293-42f3-800b-d23d52ee2492">
 ) (<img width="960" alt="Screenshot 2024-04-10 183322" src="https://github.com/dariapirvulescu18/Pizza_Shop/assets/115870351/43f6f9ba-0949-4517-b4e9-11385cd5ee7a">
 )

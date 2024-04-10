@@ -1,12 +1,12 @@
-#Pizza Shop 🍕
+# Pizza Shop 🍕
 
-##Define the project
+## Define the project
 
 Create a list based on the chosen theme with at least 10 actions/queries that can be done within
 system and a list of at least 8 object types.
 
-[x] As a player, I want to be able to choose if I want to see the menu or not.
-[x] As a player, I want to choose if I want a drink first or not. 
+[x]  As a player, I want to be able to choose if I want to see the menu or not.
+[x]  As a player, I want to choose if I want a drink first or not. 
 [x] As a player, I want to choose which size, how many and which pizza I want to order.
 [X] As a player, I want to to be corrected by the interogation system if I misspel something.
 [X] As a player, I want to know if my order can be made with the ingredients available.

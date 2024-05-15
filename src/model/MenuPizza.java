@@ -1,56 +1,18 @@
 package model;
 
+import Repositories.PizzaRepository;
+
 import javax.swing.*;
 import java.awt.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class MenuPizza extends Menu {
 
     private ArrayList<Pizza> pizzas;
 
-    public MenuPizza()  {
-        Ingredient tomato = IngredientFactory.createTomato(5);
-        Ingredient salamiI = IngredientFactory.createSalami(10);
-        Ingredient mushrooms = IngredientFactory.createMushrooms(2);
-        Ingredient flour = IngredientFactory.createFlour(1);
-        Ingredient cheese = IngredientFactory.createCheese(3);
-        Ingredient ton = IngredientFactory.createTon(1);
-        Ingredient spicyPepper = IngredientFactory.createSpicyPepper(1);
-        Ingredient prosciuttoI = IngredientFactory.createProsciutto(5);
-        ArrayList<Ingredient> ingredients1 = new ArrayList<>();
-        ArrayList<Ingredient> ingredients2 = new ArrayList<>();
-        ArrayList<Ingredient> ingredients3 = new ArrayList<>();
-        ArrayList<Ingredient> ingredients4 = new ArrayList<>();
-        ArrayList<Ingredient> ingredients5 = new ArrayList<>();
-        ingredients1.add(flour);
-        ingredients1.add(tomato);
-        ingredients1.add(cheese);
-        ingredients2.add(flour);
-        ingredients2.add(salamiI);
-        ingredients2.add(cheese);
-        ingredients3.add(flour);
-        ingredients3.add(prosciuttoI);
-        ingredients3.add(cheese);
-        ingredients3.add(mushrooms);
-        ingredients4.add(cheese);
-        ingredients4.add(flour);
-        ingredients4.add(ton);
-        ingredients5.add(flour);
-        ingredients5.add(salamiI);
-        ingredients5.add(cheese);
-        ingredients5.add(spicyPepper);
-        Pizza margherita = new Pizza("margherita",100,ingredients1);
-        Pizza salami = new Pizza("salami",200,ingredients2);
-        Pizza prosciutto = new Pizza("prosciutto",150,ingredients3);
-        Pizza tonno = new Pizza("tonna",400,ingredients4);
-        Pizza diavola = new Pizza("diavola",250,ingredients5);
-        ArrayList<Pizza> pizzas1= new ArrayList<>();
-        pizzas1.add(margherita);
-        pizzas1.add(salami);
-        pizzas1.add(prosciutto);
-        pizzas1.add(tonno);
-        pizzas1.add(diavola);
-        this.pizzas=pizzas1;
+    public MenuPizza() throws SQLException {
+        pizzas = PizzaRepository.getInstance().selectAllPizzas();
     }
 
     public ArrayList<Pizza> getPizzas() {

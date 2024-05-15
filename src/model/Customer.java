@@ -31,6 +31,7 @@ public class Customer {
         this.scoreGame =score;
         this.money+= scoreGame;
     }
+    public int getScoreGame(){return scoreGame;}
     public String getName() {
         return name;
     }
@@ -82,6 +83,9 @@ public class Customer {
     public void add_pizza(Pizza responsePizza){
 
         orderPizza.add(responsePizza);
+    }
+    public List<Pizza> getOrderPizza(){
+        return orderPizza;
     }
     @Override
     public String toString() {

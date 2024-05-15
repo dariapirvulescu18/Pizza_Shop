@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 public class MenuPrincipal extends Menu {
     public MenuPrincipal(){
@@ -83,7 +84,11 @@ public class MenuPrincipal extends Menu {
         pizzaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new MenuPizza().initMenuFrame();
+                try {
+                    new MenuPizza().initMenuFrame();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
         buttonPanel.add(pizzaButton);

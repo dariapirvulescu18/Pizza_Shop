@@ -116,4 +116,15 @@ public class Pizza {
             default -> 0;
         };
     }
+
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "type='" + type + '\'' +
+                ", size='" + size + '\'' +
+                ", ingredients=" + ingredients +
+                ", cooked=" + cooked +
+                ", cost=" + cost +
+                '}';
+    }
 }

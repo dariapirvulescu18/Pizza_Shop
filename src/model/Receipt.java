@@ -21,6 +21,14 @@ public class Receipt {
         return finalCost;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public int getTip() {
+        return tip;
+    }
+
     public void calculateFinalCost(){
         for(Pizza pi :this.client.getOrder()){
             this.finalCost +=pi.getCost();

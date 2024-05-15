@@ -1,5 +1,8 @@
 package model;
 
+import Repositories.IngredientRepository;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 public class Fridge {
     private ArrayList<Ingredient> ingredients;
@@ -24,16 +27,19 @@ public class Fridge {
         return false;
     }
 
-    public boolean checkAavailabilityPizza(Pizza pizza){
+    public boolean checkAavailabilityPizza(Pizza pizza) throws SQLException {
         ArrayList<Ingredient> pizzaIngredients= pizza.getIngredients();
         for(var ing :pizzaIngredients){
             if(!checkIngredient(ing))
                 return false;
         }
+        IngredientRepository i =  IngredientRepository.getInstance();
+
         for(var ing :pizzaIngredients){
             for(var ing_f:this.ingredients){
                 if(ing.getName().equals(ing_f.getName())){
                     ing_f.setQuantity(ing_f.getQuantity()-ing.getQuantity());
+                    i.updateQuantity(ing.getName(),ing_f.getQuantity());
                 }
             }
         }

@@ -1,25 +1,26 @@
 package service;
 
-import Repositories.CustomerRepository;
-import Repositories.IngredientRepository;
-import Repositories.ReceiptRepository;
+import Repositories.*;
 import model.*;
 import packmen.PacMan;
 
 import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class GameService {
+    private static int days=0;
     private Fridge createIngredients() throws SQLException {
         ArrayList<Ingredient> ingredients = IngredientRepository.getInstance().selectAllIngredients();
         Fridge Gelu = new Fridge(ingredients);
         return Gelu;
     }
     private Customer createClient(){
+        days++;
         System.out.println("Enter your name: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.next();
@@ -30,6 +31,20 @@ public class GameService {
         System.out.println(Daria);
         System.out.println("Hello "+ Daria.getName() +" !");
         return Daria;
+    }
+    private int chooseEmployee() throws SQLException {
+        EmployeeRepository e= EmployeeRepository.getInstance();
+        Random rand = new Random();
+        ArrayList<Integer> idList = e.allIds();
+        int randomId=2;
+        if (!idList.isEmpty()) {
+            int randomIndex = rand.nextInt(idList.size());
+            randomId = idList.get(randomIndex);
+        }
+        String nameEmployee = e.chooseEmployee(randomId);
+        int id = e.findId(nameEmployee);
+        System.out.println(nameEmployee+ " will be your server");
+        return id;
     }
     private void orderDrink(Customer Daria) throws InterruptedException {
         String drink =Daria.responseDrinks();
@@ -43,6 +58,7 @@ public class GameService {
         MenuPizza menuPizza = new MenuPizza();
         ArrayList<Pizza> lista_pizza = new ArrayList<Pizza>();
         lista_pizza= menuPizza.getPizzas();
+        PizzaRepository.getInstance().selectAllPizzas();
         System.out.println("How many pizzas would you like to order?");
         int response4= scanner.nextInt();
         for(int i=0;i<response4;i++){
@@ -111,7 +127,7 @@ public class GameService {
     public void startGame() throws InterruptedException, SQLException {
         Fridge Gelu = createIngredients();
         Customer Daria = createClient();
-
+        int idEmployee =chooseEmployee();
         System.out.println("Would you like to see the menu?");
         Scanner scanner = new Scanner(System.in);
         String response= scanner.nextLine();
@@ -145,7 +161,7 @@ public class GameService {
         System.out.println("Would you like to play a game to earn some money?");
         String response9 = scanner.next();
         if(response9.equals("Yes")){
-            playPackmen(Daria,receipt);
+            playPackmen(Daria,receipt,idEmployee);
             AuditService.log("The player is playing pacman ");
         }
         else{
@@ -155,9 +171,20 @@ public class GameService {
             int ReceiptId = r.getNextId();
             c.insert(CustomerId,Daria);
             r.insert(ReceiptId,CustomerId,Daria, receipt.getDate(),receipt.getFinalCost(),receipt.getTip());
+
+            EmployeeRepository e = EmployeeRepository.getInstance();
+            System.out.println("Rate our employee");
+            System.out.println("your rating: ");
+            int mark = scanner.nextInt();
+            e.addRating(mark,CustomerId,idEmployee);
+            System.out.println("What skill does our employee have?");
+            String skillname = scanner.nextLine();
+            int ski= e.getNextIdSkill();
+            e.addSkill(ski,skillname,CustomerId,idEmployee);
+
         }
     }
-    public void playPackmen(Customer Daria,Receipt receipt) throws InterruptedException, SQLException {
+    public void playPackmen(Customer Daria,Receipt receipt,int idEmployee) throws InterruptedException, SQLException {
         PacMan pac = new PacMan(Daria);
         pac.setVisible(true);
         pac.setTitle("Pacman");
@@ -175,5 +202,20 @@ public class GameService {
         int ReceiptId = r.getNextId();
         c.insert(CustomerId,Daria);
         r.insert(ReceiptId,CustomerId,Daria, receipt.getDate(),receipt.getFinalCost(),receipt.getTip());
+
+        Scanner scanner = new Scanner(System.in);
+        EmployeeRepository e = EmployeeRepository.getInstance();
+        System.out.println("Rate our employee");
+        System.out.println("your rating: ");
+        int mark = scanner.nextInt();
+        e.addRating(mark,CustomerId,idEmployee);
+        System.out.println("What skill does our employee have?");
+        String skillname = scanner.nextLine();
+        int ski= e.getNextIdSkill();
+        e.addSkill(ski,skillname,CustomerId,idEmployee);
+        if(days%10==0){
+            e.demoteEmployee();
+            e.promoteEmployee();
+        }
     }
 }

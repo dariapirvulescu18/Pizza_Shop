@@ -113,3 +113,91 @@ DELETE from RECEIPT_PIZZA;
 SELECT * from RECEIPT;
 DELETE  FROM RECEIPT;
 commit ;
+
+CREATE SEQUENCE SEQ_EMPLOYEE
+    INCREMENT by 1
+    START WITH 1;
+
+CREATE TABLE EMPLOYEE (
+    ID NUMBER PRIMARY KEY,
+    NAME VARCHAR2(100),
+    AGE NUMBER,
+    SALARY NUMBER
+);
+CREATE SEQUENCE SEQ_EMPSKILL
+    INCREMENT by 1
+    START WITH 1;
+
+drop table EmployeeSkills;
+CREATE TABLE EmployeeSkills (
+       id NUMBER PRIMARY KEY,
+       employeeID INT,
+       customerID INT,
+       skillName VARCHAR2(100),
+       FOREIGN KEY (employeeID) REFERENCES Employee(id),
+       FOREIGN KEY (customerID) REFERENCES CUSTOMER(ID)
+);
+CREATE TABLE EmployeeRating (
+        employee_id INT,
+        customer_id INT,
+        rating INT,
+        PRIMARY KEY (employee_id,customer_id),
+        FOREIGN KEY (employee_id) REFERENCES Employee(id),
+        FOREIGN KEY (customer_id) REFERENCES CUSTOMER(id)
+);
+commit ;
+
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'John Doe', 30, 50000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Jane Smith', 28, 55000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Emily Johnson', 35, 60000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Michael Brown', 40, 65000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Sarah Davis', 32, 52000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'David Wilson', 45, 70000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Laura Garcia', 29, 48000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'James Martinez', 33, 53000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Linda Rodriguez', 37, 58000);
+INSERT INTO Employee (id,name, age, salary) VALUES (SEQ_EMPLOYEE.nextval,'Robert Hernandez', 50, 75000);
+
+INSERT INTO CUSTOMER VALUES (3,'Alin',1000,'Soda',100,10);
+INSERT INTO CUSTOMER VALUES (4,'Jon',1000,'Soda',100,10);
+
+select * from customer;
+select * from EMPLOYEERATING;
+INSERT INTO EmployeeRating (employee_id,customer_id, rating) VALUES (1,2, 8);
+INSERT INTO EmployeeRating (employee_id,customer_id, rating) VALUES (1,3,9);
+INSERT INTO EmployeeRating (employee_id,customer_id, rating) VALUES (3,2, 7);
+INSERT INTO EmployeeRating (employee_id,customer_id, rating) VALUES (5,3, 3);
+INSERT INTO EmployeeRating (employee_id, customer_id,rating) VALUES (5,2, 4);
+
+SELECT employee_id, AVG(rating)
+FROM EmployeeRating
+GROUP BY  employee_id
+HAVING AVG(rating)=(SELECT MAX(avg_rating)
+                    FROM (SELECT employee_id, AVG(rating) as avg_rating
+                          FROM EmployeeRating
+                          GROUP BY  employee_id
+                         )
+                    );
+
+INSERT INTO EmployeeSkills (id, employeeID, customerID, skillName) VALUES (1, 2, 2, 'Java Programming');
+INSERT INTO EmployeeSkills (id, employeeID, customerID, skillName) VALUES (2, 3, 2, 'Database Management');
+
+SELECT count(*)
+fROM EmployeeSkills
+WHERE employeeID=2
+group by employeeID;
+commit ;
+select * from employee;
+select * from EmployeeSkills;
+select * from EMPLOYEERATING;
+delete from EMPLOYEESKILLs;
+delete from EMPLOYEERATING;
+delete from CUSTOMER;
+delete from RECEIPT;
+delete from RECEIPT_PIZZA;
+
+select * from CUSTOMER;
+select * from RECEIPT_PIZZA;
+select * from RECEIPT;
+select * from EMPLOYEERATING;
+select * from EMPLOYEESKILL;

@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="Final final final final project">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auditLogger.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataBaseManager/DataBaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repositories/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repositories/IngredientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repositories/PizzaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repositories/ReceiptRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/AuditService.java" afterDir="false" />
+    <list default="true" id="d1c2ec84-478f-4b84-b0b7-f7dfc872d40a" name="Changes" comment="2nd Round Project">
+      <change afterPath="$PROJECT_DIR$/src/Repositories/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b01fa86a-db60-4d85-a653-9ef3b567b35b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b01fa86a-db60-4d85-a653-9ef3b567b35b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proiect_pizzeria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proiect_pizzeria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auditLogger.csv" beforeDir="false" afterPath="$PROJECT_DIR$/auditLogger.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MenuPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MenuPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MenuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Receipt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tabele.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabele.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,32 +47,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Downloads/ojdbc11.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Downloads/ojdbc11.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Desktop/daria facutate/anul 2 sem 2/PAO/proiect_pizzeria/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "oracle"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desktop\daria facutate\anul 2 sem 2\PAO\proiect_pizzeria\images" />
@@ -123,7 +110,8 @@
       <workItem from="1712767488535" duration="1417000" />
       <workItem from="1712778822835" duration="123000" />
       <workItem from="1715589460180" duration="3241000" />
-      <workItem from="1715751835138" duration="18835000" />
+      <workItem from="1715751835138" duration="19371000" />
+      <workItem from="1715844039886" duration="8742000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -165,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712766112034</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2nd Round Project">
+      <option name="closed" value="true" />
+      <created>1715800685444</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715800685444</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +197,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Final final final project" />
     <MESSAGE value="Final final final final project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final final final final project" />
+    <MESSAGE value="2nd Round Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd Round Project" />
   </component>
 </project>
